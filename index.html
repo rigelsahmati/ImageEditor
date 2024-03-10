@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="css/favicon.jpg" sizes="100x100" type="image/x-icon">
+    <title>Image Editor</title>
+</head>
+
+<body>
+
+    <div class="container disabled">
+        <h1>Image Editor</h1>
+
+        <div class="workcpace">
+            <div class="edit-panel">
+                <div class="filters">
+                    <h2>Filters</h2>
+                    <div class="row">
+                        <button class="edit-btn edit-btn-active" id="brightnes">Brightness</button>
+                        <button class="edit-btn" id="saturation">Saturation</button>
+                    </div>
+                    <div class="row">
+                        <button class="edit-btn" id="inversion">Inversion</button>
+                        <button class="edit-btn" id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="row">
+                        <button class="edit-btn other" id="blur">Blur</button>
+                    </div>
+
+
+                </div>
+                <div class="percent">
+                    <div class="filter-value-info">
+                        <span class="filtername">Brightness</span>
+                        <span id="value">100%</span>
+                    </div>
+                    <div class="filter-value">
+                        <input type="range" max="200" min="0" value="100" class="inputrange">
+                    </div>
+                </div>
+                <div class="rotate-flip">
+                    <h2>Rotate & Flip</h2>
+                    <div class="rotate-flip-bnt">
+                        <button class="flip-btn" id="rotate-left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button class="flip-btn" id="rotate-right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button class="flip-btn" id="reflect-left"><i class='bx bx-reflect-vertical'></i></button>
+                        <button class="flip-btn" id="reflect-top"><i class='bx bx-reflect-horizontal'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="image-preview">
+                <img src="css/image-placeholder.svg" class="image" alt="Please Choose another image">
+            </div>
+        </div>
+
+
+        <div class="main-buttons">
+            <button class="main-btns" id="reset">RESET FILTERS</button>
+            <div class="main2-buttons">
+                <input type="file" id="input" accept="image/*" hidden>
+                <button class="main-btns chose-img">CHOOSE IMAGE</button>
+                <button class="main-btns download">SAVE IMAGE</button>
+
+            </div>
+        </div>
+    </div>
+    <script src='script.js'></script>
+</body>
+
+</html>

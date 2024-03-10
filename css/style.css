@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Comfortaa:wght@500&family=Concert+One&family=Courgette&family=Fira+Sans:wght@600&family=Martian+Mono&family=Prata&family=Space+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', 'Fira Sans', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #c4e6ffa1 10%, #90d1ff2e 100%);
+}
+
+button {
+    cursor: pointer !important;
+}
+
+.container {
+    box-shadow: -1px 20px 20px 10px #c1c1c15c;
+    border-radius: 15px;
+    width: 60%;
+    /* height: 80%; */
+    max-height: fit-content;
+    gap: 2vw;
+    /*Test Gap*/
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw;
+    justify-content: space-between;
+}
+
+.disabled :where(.edit-panel, .main-btns:nth-child(3), .main-btns:nth-child(1)) {
+    filter: opacity(0.3);
+    pointer-events: none;
+}
+
+.workcpace {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    /* justify-content: space-between; */
+}
+
+.image-preview {
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.edit-panel {
+    padding: 2vw;
+    border-radius: 7px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filters {
+    width: 100%;
+}
+
+.filters {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters h2 {
+    font-weight: 500;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-top: 1vw;
+}
+
+.edit-btn,
+.other {
+    width: calc(100% /2 - 1px);
+    padding: .5vw;
+    border-radius: 5px;
+    border: 1px solid #838383;
+    font-size: 1vw;
+    padding: .8vw 1vw;
+
+}
+
+.other {
+    width: 100%;
+}
+
+.edit-btn-active {
+    background-color: #1c7ce0;
+    color: white;
+    border-color: transparent;
+}
+
+.percent,
+.rotate-flip {
+    margin-top: 1.8vw;
+}
+
+.filter-value-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 7px;
+}
+
+.rotate-flip h2 {
+    font-weight: 500;
+}
+
+.rotate-flip-bnt {
+    gap: 10px;
+    display: flex;
+    margin-top: 1.3vw;
+}
+
+.flip-btn {
+    width: calc(100% / 4 - 5px);
+    padding: .5vw;
+    border-radius: 5px;
+    border: 1px solid #838383;
+    font-size: 1vw;
+    transition: all .2s;
+}
+
+.flip-btn:active {
+    background-color: #1c7ce0;
+    color: white;
+    border-color: transparent;
+}
+
+.flip-btn:nth-child(3),
+.flip-btn:nth-child(4) {
+    font-size: 1.5vw;
+}
+
+
+
+.main-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-btns:nth-child(3) {
+    background-color: #02c567;
+    border: none;
+    color: white;
+}
+
+.main-btns {
+    padding: 1vw 1.5vw;
+    border-radius: 3px;
+    border: 1px solid #838383;
+    font-size: .9vw;
+    margin: 0 .5vw;
+    /* color: white; */
+}
+
+.chose-img {
+    color: white;
+    background: #383838;
+    border: none;
+}
+
+@media screen and (max-width:800px) {
+    body {
+        padding: 3vw;
+        height: fit-content;
+    }
+
+    .workcpace {
+        flex-direction: column-reverse;
+        justify-content: space-between !important;
+    }
+
+    .image-preview {
+        margin: 0 0 5vw 0;
+        max-width: 100%;
+        border-radius: 15px;
+        max-height: 50%;
+    }
+
+    .container {
+        width: 100%;
+        height: fit-content;
+        padding: 3vw;
+    }
+
+    .container h1 {
+        display: none;
+        font-size: 1.5rem;
+    }
+
+    .main-buttons {
+        margin-top: 5vw;
+        flex-direction: column;
+        gap: 2vw;
+
+    }
+
+    .main-buttons button {
+        padding: 4vw;
+        font-size: 3.5vw !important;
+    }
+
+    .main2-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .edit-btn {
+        padding: 3vw;
+        font-size: 3vw !important;
+    }
+
+    .flip-btn {
+        padding: 2vw 0;
+        font-size: 3.5vw !important;
+    }
+
+    .rotate-flip {
+        margin-top: 5vw;
+    }
+
+    .percent {
+        margin-top: 3vw;
+    }
+}
+
+@media screen and (max-width:1350px) and (min-width:801px) {
+    .edit-panel {
+        height: fit-content;
+        padding: 3vw;
+    }
+
+    .workcpace {
+        align-items: center;
+    }
+
+    .container {
+        height: fit-content;
+        width: 80%;
+        gap: 3vw;
+        padding: 3vw;
+    }
+
+    .main-btns {
+        font-size: 1.5vw;
+        padding: 1.5vw 2vw;
+    }
+
+    .rotate-flip h2 {
+        font-size: 1rem;
+    }
+
+    .flip-btn {
+        padding: 1.5vw;
+        font-size: 1.5vw;
+    }
+
+    .edit-btn {
+        font-size: 1.5vw;
+        padding: 1vw 1.5vw;
+    }
+}
